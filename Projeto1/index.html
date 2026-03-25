@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Conversor de Moedas DevClub Edition</title>
+</head>
+<body>
+    <img src="./assets/moneyexchange.png">
+    <main>
+        <label>Converter de</label>
+            <select id="converter-de">
+                <option value="real">Real Brasileiro</option>
+                <option value="dollar">Dollar Americano</option>
+                <option value="euro">Euro Europeu</option>
+            </select>
+        <label>Converter para</label>
+            <select id="converter-para">
+                <option value="dollar">Dollar Americano</option>
+                <option value="euro">Euro Europeu</option>
+                <option value="real">Real Brasileiro</option>
+            </select>
+        <label>Valor</label>
+        <input class="currency-input" type="number">
+        <button id="convert-button">Converter</button>
+        <div>
+            <div id="to-convert">
+                <img class="flags" src="./assets/real.png">
+                <p id="converting-from">Real</p>
+                <p id="dinheiro-converter">[nulo]</p>
+            </div>
+            <img src="./assets/Vector.png" alt="flecha" id="flecha-conversora">
+            <div id="converted">
+                <img class="flags" src="./assets/usd.png">
+                <p id="currency-to-convert">Dollar</p>
+                <p id="dinheiro-convertido">[nulo]</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script src="scripts.js"></script>
+</html>
