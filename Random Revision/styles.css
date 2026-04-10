@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: indigo;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+main, section{
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+section{
+    height: 30vh;
+}
+p{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.content-to-revise{
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.revise-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    border: 5px solid yellow;
+    width: 40%;
+    height: 25vh;
+}
+
+.option-buttons{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 10px;
+}
+
+button{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+#revise-all{
+    background-color: chartreuse;
+    color: black;
+    width: 90px;
+}
+
+#html-button{
+    background-color: red;
+}
+
+#css-button{
+    background-color: blue;
+}
+
+#js-button{
+    background-color: yellow;
+    color: black;
+}

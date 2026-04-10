@@ -1,13 +1,14 @@
-const cardContainer = document.getElementById("card-container")
-const cardContainer2 = document.getElementById("card-container2")
+const containers = {
+  cardContainer: document.getElementById("card-container"),
+  cardContainer2: document.getElementById("card-container2")
+};
 
 
-import {cardList } from "./cardlist"
-import {cardList2} from "./cardlist2"
 
 
 
-function showAllCards(){
+
+function showAllCards(cardList, container){
     const obtainedCards = JSON.parse(localStorage.getItem("activeCards")) || [];
 
     let myLi =""
@@ -32,9 +33,9 @@ function showAllCards(){
     `
      }); //<Here's where the loop ends.
 
-    cardContainer.innerHTML = myLi
+    container.innerHTML = myLi
 
-    const allItems = cardContainer.querySelectorAll("li");
+    const allItems = container.querySelectorAll("li");
 
     allItems.forEach(item => {
     item.addEventListener("click", () => {
@@ -53,7 +54,21 @@ function showAllCards(){
   });
 }
 
+function switchGames() {
+  const buttons = document.querySelectorAll("button[data-target]");
+  
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.target;
 
-showAllCards()
+      Object.keys(containers).forEach(key => {
+        containers[key].style.display = (key === targetId) ? "grid" : "none";
+      });
+    });
+  });
+}
 
+switchGames()
+showAllCards(cardList, containers.cardContainer);
+showAllCards(cardList2, containers.cardContainer2);
 
